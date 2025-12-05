@@ -1,4 +1,9 @@
 public class tareasSimples {
+	String nombre;
+	String apellido;
+	double nota;
+	private String titulo;
+	boolean completado;
 	
 public tareasSimples(String nombre, String apellido, double nota, boolean completado) {
 		super();
@@ -17,14 +22,18 @@ public tareasSimples(String nombre, String apellido, double nota, boolean comple
 		
 	}
 
-	String nombre;
-	String apellido;
-	double nota;
-	public String titulo;
-	boolean completado;
 
 	public String getNombre() {
 		return nombre;
+		
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
 	}
 
 	public void setNombre(String nombre) {
