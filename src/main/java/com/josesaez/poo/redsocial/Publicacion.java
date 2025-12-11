@@ -1,7 +1,7 @@
 package com.josesaez.poo.redsocial;
 import java.time.LocalDateTime;
 public class Publicacion {
-private String Texto;
+private String texto;
 private LocalDateTime hora;
 private int likes;
 	public static void main(String[] args) {
@@ -11,15 +11,12 @@ private int likes;
 	}
 	public Publicacion(String texto, LocalDateTime hora, int likes) {
 		super();
-		Texto = texto;
+		this.texto = texto;
 		this.hora = hora;
 		this.likes = likes;
 	}
 	public String getTexto() {
-		return Texto;
-	}
-	public void setTexto(String texto) {
-		Texto = texto;
+		return texto;
 	}
 	public LocalDateTime getHora() {
 		return hora;
@@ -34,8 +31,12 @@ private int likes;
 		this.likes = likes;
 	}
 	public void mostrar() {
-		
+		System.out.println(this.texto);
+		System.out.println(this.likes);
+		System.out.println(this.hora);
 	}
-	
+	public void darMegusta() {
+		this.likes = likes;
+	}
 
 }
