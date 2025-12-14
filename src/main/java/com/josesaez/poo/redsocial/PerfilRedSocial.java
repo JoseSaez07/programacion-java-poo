@@ -3,125 +3,119 @@ package com.josesaez.poo.redsocial;
 import java.util.ArrayList;
 
 public class PerfilRedSocial {
-	private String ususario;
-	private String nombreVisible;
-	private String biografia;
-	private String paisOciudad;
-	private int numeroDeSeguidores;
-	private Estado estado;
-	private boolean cuentavercificada;
-	private ArrayList<Publicacion> publicaciones;
+    private String ususario;
+    private String nombreVisible;
+    private String biografia;
+    private String paisOciudad;
+    private int numeroDeSeguidores;
+    private Estado estado;
+    private boolean cuentavercificada;
+    private ArrayList<Publicacion> publicaciones;
 
-	public String getUsusario() {
-		return ususario;
-	}
+    public PerfilRedSocial() {
+        super();
+        this.publicaciones = new ArrayList<Publicacion>();
+    }
 
-	public PerfilRedSocial() {
-		super();
-		this.publicaciones = new  ArrayList<Publicacion>();
-	}
+    public PerfilRedSocial(String ususario, String nombreVisible, String biografia, String paisOciudad,
+                           int numeroDeSeguidores, Estado estado, boolean cuentavercificada) {
+        super();
+        this.ususario = ususario;
+        this.nombreVisible = nombreVisible;
+        this.biografia = biografia;
+        this.paisOciudad = paisOciudad;
+        this.numeroDeSeguidores = numeroDeSeguidores;
+        this.estado = estado;
+        this.cuentavercificada = cuentavercificada;
+        this.publicaciones = new ArrayList<Publicacion>();
+    }
 
-	public PerfilRedSocial(String ususario, String nombreVisible, String biografia, String paisOciudad,
-			int numeroDeSeguidores, Estado estado, boolean cuentavercificada) {
-		super();
-		this.ususario = ususario;
-		this.nombreVisible = nombreVisible;
-		this.biografia = biografia;
-		this.paisOciudad = paisOciudad;
-		this.numeroDeSeguidores = numeroDeSeguidores;
-		this.estado = estado;
-		this.cuentavercificada = cuentavercificada;
-		this.publicaciones = new  ArrayList<Publicacion>();
-	}
-	
-	public ArrayList<Publicacion> getListas() {
-		return publicaciones;
-	}
+    public String getUsusario() {
+        return ususario;
+    }
 
-	public void setListas(ArrayList<Publicacion> listas) {
-		this.publicaciones = listas;
-	}
+    public void setUsusario(String ususario) {
+        this.ususario = ususario;
+    }
 
-	public void setUsusario(String ususario) {
-		this.ususario = ususario;
-	}
+    public ArrayList<Publicacion> getListas() {
+        return publicaciones;
+    }
 
-	public String getNombreVisible() {
-		return nombreVisible;
-	}
+    public void setListas(ArrayList<Publicacion> listas) {
+        this.publicaciones = listas;
+    }
 
-	public void setNombreVisible(String nombreVisible) {
-		this.nombreVisible = nombreVisible;
-	}
+    public String getNombreVisible() {
+        return nombreVisible;
+    }
 
-	public String getBiografia() {
-		return biografia;
-	}
+    public void setNombreVisible(String nombreVisible) {
+        this.nombreVisible = nombreVisible;
+    }
 
-	public void setBiografia(String biografia) {
-		this.biografia = biografia;
-	}
+    public String getBiografia() {
+        return biografia;
+    }
 
-	public String getPaisOciudad() {
-		return paisOciudad;
-	}
+    public void setBiografia(String biografia) {
+        this.biografia = biografia;
+    }
 
-	public void setPaisOciudad(String paisOciudad) {
-		this.paisOciudad = paisOciudad;
-	}
+    public String getPaisOciudad() {
+        return paisOciudad;
+    }
 
-	public int getNumeroDeSeguidores() {
-		return numeroDeSeguidores;
-	}
+    public void setPaisOciudad(String paisOciudad) {
+        this.paisOciudad = paisOciudad;
+    }
 
-	public void setNumeroDeSeguidores(int numeroDeSeguidores) {
-		this.numeroDeSeguidores = numeroDeSeguidores;
-	}
+    public int getNumeroDeSeguidores() {
+        return numeroDeSeguidores;
+    }
 
-	public Estado getEstado() {
-		return estado;
-	}
+    public void setNumeroDeSeguidores(int numeroDeSeguidores) {
+        this.numeroDeSeguidores = numeroDeSeguidores;
+    }
 
-	public void setEstado(Estado estado) {
-		this.estado = estado;
-	}
+    public Estado getEstado() {
+        return estado;
+    }
 
-	public boolean isCuentavercificada() {
-		return cuentavercificada;
-	}
+    public void setEstado(Estado estado) {
+        this.estado = estado;
+    }
 
-	public void setCuentavercificada(boolean cuentavercificada) {
-		this.cuentavercificada = cuentavercificada;
-	}
+    public boolean isCuentavercificada() {
+        return cuentavercificada;
+    }
 
-	public void mostrarInformacion() {
-		System.out.println(this.nombreVisible);
-	}
+    public void setCuentavercificada(boolean cuentavercificada) {
+        this.cuentavercificada = cuentavercificada;
+    }
 
-	public void añadirSeguidores() {
-		this.numeroDeSeguidores += numeroDeSeguidores;
-	}
+    public void mostrarInformacion() {
+        System.out.println(this.nombreVisible);
+    }
 
-	public void estadoPerfil(Estado estado) {
-		this.estado = estado;
-	}
+    public void añadirSeguidores() {
+        this.numeroDeSeguidores += numeroDeSeguidores;
+    }
 
-	public boolean estaActivo() {
-		if (this.cuentavercificada) {
-			System.out.println("Esta activo");
-		} else {
-			System.out.println("Esta desactivada");
-		}
-		return this.cuentavercificada;
-	}
+    public void estadoPerfil(Estado estado) {
+        this.estado = estado;
+    }
 
-	public void crearPublicacion(String texto) {
-    Publicacion m = new Publicacion();
-    m.set()
-   
-	}
+    public boolean estaActivo() {
+        return this.estado.equals(Estado.COMPLETADO);
+    }
 
-	public void listaPublicacion(Publicacion listado) {
+    public void crearPublicacion(String texto) {
+        Publicacion m = new Publicacion(texto);
+        this.publicaciones.add(m);
+    }
 
-	}
+    public void listaPublicacion(Publicacion listado) {
+
+    }
 }
