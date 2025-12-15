@@ -35,8 +35,14 @@ private int likes;
 		System.out.println(this.likes);
 		System.out.println(this.hora);
 	}
-	public void darMegusta() {
-		this.likes = likes;
+	public void darMegusta(int likes) {
+		this.likes++;
 	}
-
+public int verMegusta() {
+	return this.likes;
+}
+public void setTexto(String titulo) {
+	// TODO Auto-generated method stub
+	
+}
 }

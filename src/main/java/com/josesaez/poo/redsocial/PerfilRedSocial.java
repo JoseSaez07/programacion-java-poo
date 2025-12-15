@@ -18,7 +18,7 @@ public class PerfilRedSocial {
 
 	public PerfilRedSocial() {
 		super();
-		this.publicaciones = new  ArrayList<Publicacion>();
+		this.publicaciones = new ArrayList<Publicacion>();
 	}
 
 	public PerfilRedSocial(String ususario, String nombreVisible, String biografia, String paisOciudad,
@@ -31,9 +31,9 @@ public class PerfilRedSocial {
 		this.numeroDeSeguidores = numeroDeSeguidores;
 		this.estado = estado;
 		this.cuentavercificada = cuentavercificada;
-		this.publicaciones = new  ArrayList<Publicacion>();
+		this.publicaciones = new ArrayList<Publicacion>();
 	}
-	
+
 	public ArrayList<Publicacion> getListas() {
 		return publicaciones;
 	}
@@ -115,13 +115,14 @@ public class PerfilRedSocial {
 		return this.cuentavercificada;
 	}
 
-	public void crearPublicacion(String texto) {
-    Publicacion m = new Publicacion();
-    m.set()
-   
-	}
-
-	public void listaPublicacion(Publicacion listado) {
+	public void crearPublicacion(String titulo) {
+		Publicacion m = new Publicacion();
+		this.publicaciones.add(m);
 
 	}
-}
+
+	public void mostrarPublicaciones() {
+		this.publicaciones.stream().forEach(p->p.mostrar());
+	}
+  }		
+
